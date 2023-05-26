@@ -22,8 +22,49 @@
 }
 
 .text-7 {
-  margin-top: 1000px;
-  font-size: 30px;
+  background: linear-gradient(to right, #eb3f53, #ff9e80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+}
+.text-8 {
+  background: linear-gradient(to right, #00805b, #00c198);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+}
+.text-9 {
+  background: linear-gradient(to right, #6f268e, #4432bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: black; */
+  font-size: 120px;
+
+  /* border: 10px dashed #46398b; */
+  border-radius: 30px;
+  margin-top: -20px;
+}
+
+.glass {
+  margin-top: 40px;
+  line-height: 180px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.happy-birthday {
+  line-height: 90px;
+  position: absolute;
+  top: 150px;
+  left: 120px;
+  width: 600px;
+  height: 500px;
+  text-align: center;
 }
 
 .cake-general {

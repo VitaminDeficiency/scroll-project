@@ -6,8 +6,8 @@ const sectionWelcome = $(".section-welcome");
 const sectionheader = $(".section-header");
 const welcomeBackground = $(".welcome-background");
 const headerBackground = $(".header-background");
-const container = $(".header-container");
-const containerChild = $(".header-container-child");
+const headerContainer = $(".header-container");
+const headerContainerChild = $(".header-container-child");
 const tiger = $(".tiger");
 const bubble = $(".bubble");
 
@@ -21,7 +21,11 @@ const textWelcome3 = $(".text-3");
 const textWelcome4 = $(".text-4");
 const textWelcome5 = $(".text-5");
 const textWelcome6 = $(".text-6");
-const textWelcome7 = $(".text-7");
+
+const text7 = $(".text-7");
+const text8 = $(".text-8");
+const textGlass = $(".glass");
+
 const background1 = $(".background-1");
 const background2 = $(".background-2");
 
@@ -51,34 +55,15 @@ const canvas = $("#my-canvas");
         const offsetHeightWelcome =
           sectionWelcome.offsetHeight - window.innerHeight;
 
-        const offsetHeightheader =
+        const offsetHeightHeader =
           offsetHeightWelcome + sectionheader.offsetHeight;
 
         _this.welcomeScreen(scrollTop, offsetHeightWelcome);
+        _this.headerScreen(scrollTop, offsetHeightHeader);
 
-        if (sectionheader.getBoundingClientRect().top <= 0) {
-          container.classList.add("show");
-          background2.classList.add("show");
-          tiger.classList.add("show");
-          bubble.classList.add("show");
-          background2.style.top = 100 + -scrollTop * 0.1 + "px";
-          bubble.style.top = (scrollTop - offsetHeightheader) * 0.05 + "px";
-
-          setTimeout(function () {
-            containerChild.classList.add("show-hide");
-          }, 500);
-          setTimeout(function () {}, 500);
-        } else {
-          container.classList.remove("show");
-          background2.classList.remove("show");
-          // tiger.classList.remove("show");
-          // bubble.classList.remove("show");
-          // containerChild.classList.remove("show-hide");
-        }
-
-        console.log(sectionContent.getBoundingClientRect().top);
-        if (sectionheader.getBoundingClientRect().top <= 0) {
-        }
+        // console.log(sectionContent.getBoundingClientRect().top);
+        // if (sectionheader.getBoundingClientRect().top <= 0) {
+        // }
       };
     },
 
@@ -123,11 +108,11 @@ const canvas = $("#my-canvas");
 
       ob.style.opacity = opacityValue;
 
-      // function animate() {
-      //   // Gọi lại hàm animate để tạo hiệu ứng mượt mà
-      //   requestAnimationFrame(animate);
-      // }
-      // animate();
+      function animate() {
+        // Gọi lại hàm animate để tạo hiệu ứng mượt mà
+        requestAnimationFrame(animate);
+      }
+      animate();
     },
 
     // Di chuyển động các bánh kẹo
@@ -173,53 +158,88 @@ const canvas = $("#my-canvas");
         scroll,
         0,
         0,
-        obHeight * 0.13,
-        obHeight * 0.16
+        obHeight * 0.17,
+        obHeight * 0.2
       );
 
       this.handleOpacityChange(
         textWelcome2,
         scroll,
-        obHeight * 0.16,
-        obHeight * 0.19,
-        obHeight * 0.32,
-        obHeight * 0.35
+        obHeight * 0.2,
+        obHeight * 0.21,
+        obHeight * 0.29,
+        obHeight * 0.3
       );
       this.handleOpacityChange(
         textWelcome3,
         scroll,
-        obHeight * 0.35,
-        obHeight * 0.38,
-        obHeight * 0.48,
-        obHeight * 0.51
+        obHeight * 0.3,
+        obHeight * 0.31,
+        obHeight * 0.39,
+        obHeight * 0.4
       );
       this.handleOpacityChange(
         textWelcome4,
         scroll,
-        obHeight * 0.51,
-        obHeight * 0.54,
-        obHeight * 0.67,
-        obHeight * 0.7
+        obHeight * 0.4,
+        obHeight * 0.41,
+        obHeight * 0.49,
+        obHeight * 0.5
       );
       this.handleOpacityChange(
         textWelcome5,
         scroll,
-        obHeight * 0.7,
-        obHeight * 0.73,
-        obHeight * 0.86,
-        obHeight * 0.89
+        obHeight * 0.5,
+        obHeight * 0.51,
+        obHeight * 0.59,
+        obHeight * 0.6
       );
       this.handleOpacityChange(
         textWelcome6,
         scroll,
-        obHeight * 0.89,
-        obHeight * 0.92,
-        obHeight * 0.98,
-        obHeight
+        obHeight * 0.6,
+        obHeight * 0.61,
+        obHeight * 0.9,
+        obHeight * 0.9
       );
     },
 
-    headerScreen: function () {},
+    headerScreen: function (scroll, obHeight) {
+      if (sectionheader.getBoundingClientRect().top <= 0) {
+        headerContainer.classList.add("show");
+        background2.classList.add("show");
+        tiger.classList.add("show");
+
+        background2.style.top = 100 + -scroll * 0.1 + "px";
+        bubble.style.top = 60 + (scroll - obHeight) * 0.05 + "px";
+
+        setTimeout(function () {
+          bubble.classList.add("show");
+        }, 300);
+
+        setTimeout(function () {
+          headerContainerChild.classList.add("show-hide");
+        }, 800);
+
+        setTimeout(function () {
+          text7.classList.add("show");
+        }, 900);
+
+        setTimeout(function () {
+          text8.classList.add("show");
+        }, 1100);
+
+        setTimeout(function () {
+          textGlass.classList.add("show");
+        }, 1300);
+      } else {
+        headerContainer.classList.remove("show");
+        background2.classList.remove("show");
+        tiger.classList.remove("show");
+        bubble.classList.remove("show");
+        headerContainerChild.classList.remove("show-hide");
+      }
+    },
 
     // RUN
     start: function () {

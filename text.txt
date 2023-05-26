@@ -1,0 +1,54 @@
+html.enhance-base-xp .section-hero {
+  z-index: 2;
+  overflow: visible;
+  display: block;
+  position: relative;
+  margin-top: calc(var(--r-localnav-height) * -1);
+  height: 200vh;
+  pointer-events: all;
+  --airpod-copy-scroll: 0vh;
+  --airpods-start-scale: 0.5;
+  --airpods-end-scale: 1;
+  --airpods-out-scale: 2.5;
+  --hero-cta-scroll: -100vh;
+  --airpod-left-translate-x: 215px;
+  --airpod-left-translate-y: 150px;
+  --airpod-right-translate-x: -265px;
+  --airpod-right-translate-y: -150px;
+  --airpod-left-moveout-y: -40vh;
+}
+
+.section-spatial-audio {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  background-color: #e93ae9;
+}
+
+html.enhance-base-xp .section-spatial-audio {
+  z-index: 1;
+  margin-top: -150vh;
+  position: relative;
+  height: 800vh;
+  width: 100%;
+  overflow: visible;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: #000;
+  --headline-one-scroll: a0t + 60vh;
+  --headline-two-scroll: a0t + 230vh;
+  --headline-three-scroll: a0t + 420vh;
+  --start-spatial-flow: a0t + 200vh - 50vh;
+  --start-case-flow: a0t + 400vh;
+  --end-case-flow: a0t + 500vh;
+  --end-case-translate-y: a0t + 600vh;
+  --end-case-scaling: a0t + 700vh;
+  --end-opacity-light: a0t + 510vh;
+  --flow-transform-y-start: var(--r-localnav-height);
+  --case-transform-y-start: -0.25vh;
+  --case-transform-y-end: -1.25vh;
+}

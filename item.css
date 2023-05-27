@@ -37,17 +37,19 @@
   background: linear-gradient(to right, #6f268e, #4432bb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* color: black; */
-  font-size: 120px;
 
-  /* border: 10px dashed #46398b; */
-  border-radius: 30px;
+  font-size: 120px;
   margin-top: -20px;
 }
 
 .glass {
-  margin-top: 40px;
+  width: 100%;
   line-height: 180px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -60,11 +62,11 @@
 .happy-birthday {
   line-height: 90px;
   position: absolute;
-  top: 150px;
   left: 120px;
   width: 600px;
-  height: 500px;
+  height: 380px;
   text-align: center;
+  transition: all ease-out 0.5s;
 }
 
 .cake-general {

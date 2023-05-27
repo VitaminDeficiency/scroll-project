@@ -22,6 +22,7 @@ const textWelcome4 = $(".text-4");
 const textWelcome5 = $(".text-5");
 const textWelcome6 = $(".text-6");
 
+const happyBirthday = $(".happy-birthday");
 const text7 = $(".text-7");
 const text8 = $(".text-8");
 const textGlass = $(".glass");
@@ -212,6 +213,7 @@ const canvas = $("#my-canvas");
 
         background2.style.top = 100 + -scroll * 0.1 + "px";
         bubble.style.top = 60 + (scroll - obHeight) * 0.05 + "px";
+        happyBirthday.style.top = 50 + -(scroll - obHeight) * 0.03 + "px";
 
         setTimeout(function () {
           bubble.classList.add("show");

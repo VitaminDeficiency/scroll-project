@@ -243,6 +243,8 @@ const canvas = $("#my-canvas");
       }
     },
 
+    contentScreens: function (scroll, obHeight) {},
+
     // RUN
     start: function () {
       this.handleScroll();

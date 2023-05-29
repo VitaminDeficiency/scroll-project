@@ -204,19 +204,6 @@
   animation: animate 29s linear infinite;
 }
 
-.triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 100px 173.2px 100px;
-  border-color: transparent transparent #47b06a transparent;
-  /* border: 2px solid #47b06a; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @keyframes animate {
   0% {
     transform: translate(0%, 0%) rotate(0deg);

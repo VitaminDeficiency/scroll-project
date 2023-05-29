@@ -42,7 +42,9 @@ const cakeElement = [
   $(".cake-8"),
 ];
 
-const canvas = $("#my-canvas");
+const hiddenCircle = $$(".hidden-shape__circle");
+const hiddenSquare = $$(".hidden-shape__square");
+// const hiddenTriangle = $$(".hidden-shape__triangle");
 
 (function () {
   var app = {
@@ -51,7 +53,7 @@ const canvas = $("#my-canvas");
       const _this = this;
       document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        console.log(scrollTop);
+        // console.log(scrollTop);
 
         const offsetHeightWelcome =
           sectionWelcome.offsetHeight - window.innerHeight;
@@ -66,6 +68,21 @@ const canvas = $("#my-canvas");
         // if (sectionheader.getBoundingClientRect().top <= 0) {
         // }
       };
+    },
+
+    handleIntersection: function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+      hiddenCircle.forEach((el) => observer.observe(el));
+      hiddenSquare.forEach((el) => observer.observe(el));
     },
 
     // Thao tác opacity đối tượng tại điểm đầu và điểm cuối
@@ -248,6 +265,7 @@ const canvas = $("#my-canvas");
     // RUN
     start: function () {
       this.handleScroll();
+      this.handleIntersection();
     },
   };
   app.start();

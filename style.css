@@ -152,19 +152,11 @@
   transform: translateY(100%);
 }
 
-.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-.show-hide {
-  opacity: 0;
-}
-
 .section-content {
   width: 100%;
 }
 
-/* content */
+/* ----------------- content ----------------- */
 
 .content-margin_left {
   margin-left: 90px;
@@ -177,7 +169,8 @@
 .content-2,
 .content-3,
 .content-4,
-.content-5 {
+.content-5,
+.content-6 {
   width: 100%;
   height: 100vh;
   background-color: #05825e;
@@ -214,6 +207,14 @@
   width: 100px;
   border-radius: 20px;
   font-size: 30px;
+
+  /* From https://css.glass */
+  /* background: rgba(255, 255, 255, 0.2); */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .container-content {
@@ -234,52 +235,67 @@
 }
 
 .background__blue {
-  background-color: #4821ae;
+  background: rgba(0, 72, 255, 0.5);
 }
-
 .background__blue-deep {
-  background-color: #3e337b;
+  background-color: rgba(47, 13, 235, 0.5);
 }
 .background__blue-dark {
-  background-color: #2a1196;
+  background-color: rgba(66, 40, 185, 0.5);
+  /* background-color: #2a1196; */
 }
 .background__violet-dark {
-  background-color: #5330ac;
+  background-color: rgba(129, 14, 224, 0.5);
+  /* background-color: #5330ac; */
 }
 .background__violet-deep {
-  background-color: #631886;
+  background-color: rgba(79, 0, 115, 0.5);
+  /* background-color: #631886; */
 }
 
-.test-color {
-  background-color: #4482bb;
+.background__yellow {
+  background-color: rgba(228, 124, 13, 0.5);
+  /* background-color: #631886; */
+}
+
+.background__red {
+  background-color: rgba(162, 0, 0, 0.5);
+  /* background-color: #631886; */
 }
 
 /* ---------------- Các thuộc tính tuỳ chỉnh cho đối tượng ----------- */
 
-.birthday-cake {
-  position: absolute;
-  top: -300px;
-  left: -300px;
-  scale: 0.3;
-  z-index: 5;
+.hidden-shape__circle {
+  scale: 0;
+  transition: all ease 1s;
 }
 
-.gif-1 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  scale: 0.3;
-  z-index: 5;
+.hidden-shape__square {
+  scale: 0;
+  transition: all ease 1s;
 }
 
-.circle-1 {
-  position: absolute;
-  height: 600px;
-  width: 600px;
+.hidden-shape__triangle {
+  scale: 0;
+  transition: all ease 1.5s;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden-shape__circle {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
   scale: 1;
-  border-radius: 50%;
-  /* background-color: #079c72; */
-  background-color: #47b06a;
+  transform: translateX(0);
+  transform: translateY(0);
+  transform: rotate();
+}
+
+.show-hide {
+  opacity: 0;
 }
 
 .avt-1 {
@@ -287,6 +303,7 @@
   transform: rotate(-7deg);
 }
 
+/* Cup */
 .icon-1 {
   top: 0;
   right: -40px;
@@ -295,10 +312,11 @@
   transform: rotate(8deg);
 }
 
+/* Money */
 .icon-2 {
   bottom: 0;
   left: -40px;
-  color: rgb(225, 23, 23);
+  color: rgb(0, 193, 61);
   transform: rotate(-10deg);
 }
 
@@ -317,6 +335,7 @@
   transform: rotate(7deg);
 }
 
+/* Spa */
 .icon-3 {
   top: 0;
   left: 0;
@@ -324,6 +343,7 @@
   transform: rotate(-10deg);
 }
 
+/* Heart */
 .icon-4 {
   bottom: 0;
   left: -40px;
@@ -332,11 +352,57 @@
   transform: rotate(-4deg);
 }
 
+/* Nothing */
 .icon-5 {
   top: 300px;
   right: -50px;
   scale: 0.4;
   transform: rotate(45deg);
+}
+
+.avt-3 {
+  width: 70%;
+  transform: rotate(-2deg);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 300px 500px 400px;
+  border-color: transparent transparent #47b06a transparent;
+  /* border: 2px solid #47b06a; */
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  transform: rotate(45deg);
+}
+
+/* Music */
+.icon-6 {
+  bottom: 50px;
+  left: -50px;
+  color: #75a0ff;
+  scale: 0.7;
+  transform: rotate(25deg);
+}
+
+/* fire */
+.icon-7 {
+  top: 300px;
+  right: -70px;
+  color: #f94357;
+  scale: 1;
+  transform: rotate(5deg);
+}
+
+/* Start */
+.icon-8 {
+  top: 0px;
+  left: -50px;
+  color: gold;
+  scale: 1.2;
+  transform: rotate(-18deg);
 }
 
 .square {
@@ -348,13 +414,22 @@
   background-color: #47b06a;
 }
 
-.content-3 .container-content {
+.square-2 {
+  position: absolute;
+  height: 80vh;
+  width: 90%;
+  border-radius: 30px;
+  transform: rotate(0deg);
+  background-color: #289b64;
+}
+
+.content-4 .container-content {
   margin: 0 35px;
   width: 90%;
   /* text-align: center; */
 }
 
-.content-3 h1 {
+.content-4 h1 {
 }
 
 .flower {
@@ -364,13 +439,8 @@
   scale: 0.7;
 }
 
-.square-2 {
-  position: absolute;
-  height: 80vh;
-  width: 90%;
-  border-radius: 30px;
-  transform: rotate(0deg);
-  background-color: #289b64;
+.content-5 {
+  height: 120vh;
 }
 
 .container-avt {
@@ -383,42 +453,111 @@
   z-index: 5;
 }
 
-.full-width {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.content-6 {
+  height: 50vh;
+}
+
+.ending {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   margin-top: 0;
-  margin-bottom: 40px;
+}
+
+.plant-animate {
+  position: absolute;
+  bottom: 110px;
+}
+
+.plant {
+  position: absolute;
+  bottom: 50px;
+
+  width: 300px;
+  height: 300px;
+  scale: 2;
+}
+
+.notes-message {
+  color: #000000;
+  font-size: 17px;
+}
+
+.notes-message p {
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .line {
-  padding-top: 15px;
-  border-top: 2px solid #289b64;
-}
-
-.line p {
   padding: 15px 0;
-}
-
-.small-font {
-  font-size: 20px;
-  color: azure;
+  border-top: 5px solid #000000;
 }
 
 .footer {
   width: 100%;
-  height: 80px;
+  height: 270px;
   font-size: 15px;
-  color: azure;
+  color: #d2e1ff;
   background: #0b1a33;
+}
+
+.container-contact {
+  font-size: 15px;
+  width: 100%;
+  height: 60%;
+  padding-top: 30px;
+}
+
+.container-contact h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  width: 70%;
+  height: 100%;
+  font-size: 15px;
+  padding-right: 90px;
+  float: left;
+}
+
+.contact-info p:nth-child(3) {
+  margin: 10px 0;
+}
+
+.contact-social {
+  float: right;
+}
+
+.contact-social a:nth-child(3) {
+  margin: 0 35px;
+}
+
+.icon-social {
+  font-size: 30px;
+  color: #d2e1ff;
+}
+
+.icon-social:hover {
+  color: #ecf2ff;
+}
+
+.line-white {
+  padding: 15px 0;
+
+  border-top: 2px solid #3c485c;
 }
 
 .copyright {
   float: left;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .vietnam {
   float: right;
-  margin-top: 20px;
+  margin-top: 0px;
 }

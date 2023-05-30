@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- <script defer src="./contentAnimation.js"></script> -->
+    <script defer src="./app.js"></script>
   </head>
   <body>
     <div class="background">
@@ -132,11 +132,15 @@
           <div class="content-1 over-hiden">
             <div class="container flex-center">
               <div class="container-img flex-center">
-                <div class="circle hidden-shape__circle"></div>
-                <div class="icon-1 icon background__blue-deep flex-center">
+                <div class="circle hidden hidden-shape__circle"></div>
+                <div
+                  class="icon-1 hidden hidden-icon__1 icon background__blue-deep flex-center"
+                >
                   <i class="fa-solid fa-trophy"></i>
                 </div>
-                <div class="icon-2 icon background__blue-dark flex-center">
+                <div
+                  class="icon-2 hidden hidden-icon__2 icon background__violet-dark flex-center"
+                >
                   <i class="fa-solid fa-money-bill-1-wave"></i>
                 </div>
                 <img
@@ -147,13 +151,13 @@
                 />
               </div>
               <div class="container-content content-margin_left">
-                <h1 class="header-content">Tuổi mới, thành công mới</h1>
-                <p>
+                <h1 class="header-content hidden">Tuổi mới, thành công mới</h1>
+                <p class="p1 hidden">
                   Ngày càng rich, mua đồ không nhìn giá, chốt đơn không cần biết
                   số lượng, không cần phải đi mượn tiền
-                  <br /><br /><br />
-                  ... mượn của tui cũng được 😎
+                  <br /><br />
                 </p>
+                <p class="rich hidden">... mượn của tui cũng được 😎</p>
               </div>
             </div>
           </div>
@@ -161,27 +165,34 @@
           <div class="content-2 over-hiden">
             <div class="container flex-center">
               <div class="container-content content-margin_right">
-                <h1 class="header-content">Hãy thật nhiều sức khoẻ</h1>
-                <p>
+                <h1 class="header-content hidden">Hãy thật nhiều sức khoẻ</h1>
+                <p class="p1 hidden">
                   Chúc bạn có nhiều sức khỏe, luôn khỏe mạnh và tràn đầy năng
-                  lượng để đối mặt với cuộc sống hàng ngày. <br />
+                  lượng để đối mặt với cuộc sống hàng ngày.
                   <br />
+                  <br />
+                </p>
+                <p class="p2 hidden">
                   Hãy để sức khỏe luôn là ưu tiên hàng đầu của bạn và tận hưởng
                   mỗi ngày với nhiều niềm vui và sự thịnh vượng.
                 </p>
               </div>
               <div class="container-img flex-center">
-                <div class="square hidden-shape__square"></div>
+                <div class="square hidden hidden-shape__square"></div>
 
-                <div class="icon-3 icon background__blue flex-center">
+                <div
+                  class="icon-3 hidden hidden-icon__3 icon background__blue flex-center"
+                >
                   <!-- <i class="fa-solid fa-plus"></i> -->
                   <i class="fa-solid fa-spa"></i>
                 </div>
-                <div class="icon-4 icon background__violet-dark flex-center">
+                <div
+                  class="icon-4 hidden hidden-icon__4 icon background__violet-dark flex-center"
+                >
                   <i class="fa-solid fa-heart"></i>
                 </div>
                 <div
-                  class="icon-5 icon background__violet-dark flex-center"
+                  class="icon-5 hidden hidden-icon__5 icon background__violet-dark flex-center"
                 ></div>
                 <img
                   class="img avt-2"
@@ -194,16 +205,22 @@
           </div>
 
           <div class="content-3 over-hiden">
-            <div class="container hidden flex-center">
+            <div class="container flex-center">
               <div class="container-img flex-center">
-                <div class="triangle"></div>
-                <div class="icon-6 icon background__blue flex-center">
+                <div class="triangle hidden hidden-shape__triangle"></div>
+                <div
+                  class="icon-6 hidden hidden-icon__6 icon background__blue flex-center"
+                >
                   <i class="fa-solid fa-music"></i>
                 </div>
-                <div class="icon-7 icon background__violet-dark flex-center">
+                <div
+                  class="icon-7 hidden hidden-icon__7 icon background__violet-dark flex-center"
+                >
                   <i class="fa-solid fa-fire"></i>
                 </div>
-                <div class="icon-8 icon background__yellow flex-center">
+                <div
+                  class="icon-8 hidden hidden-icon__8 icon background__yellow flex-center"
+                >
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <img
@@ -214,34 +231,40 @@
                 />
               </div>
               <div class="container-content content-margin_left">
-                <h1 class="header-content">Vy là độc nhất</h1>
-                <p>
+                <h1 class="header-content hidden">Vy là độc nhất</h1>
+                <p class="p1 hidden">
                   Mỗi người trên cuộc đời này có những đặc điểm, khả năng và giá
-                  trị riêng. Đó là điều làm cho chúng ta đặc biệt và khác nhau.
+                  trị riêng.
+                  <br />
+                  <br />
+                </p>
+                <p class="p2 hidden">
+                  Đó là điều làm cho chúng ta đặc biệt và khác nhau.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="content-4">
-            <div class="container hidden flex-center">
+            <div class="container flex-center">
               <div class="square-2 over-hiden">
                 <img
-                  class="flower"
+                  class="flower hidden hidden-flower"
                   src="./asset-item-background/flower.png"
                   alt=""
                   srcset=""
                 />
                 <div class="container-content">
-                  <h1 class="header-content">
+                  <h1 class="header-content hidden">
                     Hãy luôn là bông hoa xinh đẹp nhất
                   </h1>
-                  <p>
+                  <p class="p1 hidden">
                     Hãy luôn là một người hạnh phúc nhất, sống một cuộc sống
-                    trọn vẹn,.. <br />
+                    trọn vẹn,..
+                  </p>
+
+                  <p class="rich-2 hidden">
                     .. cuộc đời là một cuộc hành trình, không phải là đích đến
-                    <br />.. và ngoài kia khó khăn quá thì còn có tôi, ít ra thì
-                    hiện tại, tôi vẫn là vùng đất an toàn cho bà.
                   </p>
                 </div>
               </div>
@@ -249,10 +272,9 @@
           </div>
 
           <div class="content-5 flex-center over-hiden">
-            <div class="container hidden flex-center">
+            <div class="container flex-center">
               <div class="liquid-1"></div>
               <div class="liquid-2"></div>
-
               <div class="container-avt">
                 <img
                   class="ballon-1"
@@ -285,7 +307,7 @@
                   alt=""
                 />
                 <img
-                  class="img avt-0"
+                  class="img avt-4"
                   src="./asset-item-background/avt-4.jpg"
                   alt=""
                 />
@@ -294,11 +316,12 @@
           </div>
 
           <div class="content-6">
-            <div class="container hidden ending">
+            <div class="container ending">
               <div
                 class="container-content plant-animate flex-center full-width"
               >
                 <lottie-player
+                  class="plant"
                   src="https://assets10.lottiefiles.com/packages/lf20_wcjgoacf.json"
                   background="transparent"
                   speed="1"
@@ -307,6 +330,7 @@
                 ></lottie-player>
               </div>
               <div class="container-content notes-message full-width line">
+                <h3>Ghi chú từ Ý :</h3>
                 <p>
                   <b>
                     Trên đây là một bản web tôi thực hiện, mục đích chính là rèn
@@ -366,7 +390,6 @@
         </div>
       </section>
     </div>
-    <script src="./welcomeAndHeader.js"></script>
 
     <!-- <script src="index.min.js"></script>
     <canvas id="my-canvas"></canvas>

@@ -42,9 +42,7 @@ const cakeElement = [
   $(".cake-8"),
 ];
 
-const hiddenCircle = $$(".hidden-shape__circle");
-const hiddenSquare = $$(".hidden-shape__square");
-// const hiddenTriangle = $$(".hidden-shape__triangle");
+const hiddenCircle = $$(".hidden");
 
 (function () {
   var app = {
@@ -68,21 +66,6 @@ const hiddenSquare = $$(".hidden-shape__square");
         // if (sectionheader.getBoundingClientRect().top <= 0) {
         // }
       };
-    },
-
-    handleIntersection: function () {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          console.log(entry);
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      });
-      hiddenCircle.forEach((el) => observer.observe(el));
-      hiddenSquare.forEach((el) => observer.observe(el));
     },
 
     // Thao tác opacity đối tượng tại điểm đầu và điểm cuối
@@ -260,12 +243,24 @@ const hiddenSquare = $$(".hidden-shape__square");
       }
     },
 
-    contentScreens: function (scroll, obHeight) {},
+    contentScreens: function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            // entry.target.classList.remove("show");
+          }
+        });
+      });
+      hiddenCircle.forEach((el) => observer.observe(el));
+    },
 
     // RUN
     start: function () {
       this.handleScroll();
-      this.handleIntersection();
+      this.contentScreens();
     },
   };
   app.start();

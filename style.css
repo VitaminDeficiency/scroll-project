@@ -156,7 +156,7 @@
   width: 100%;
 }
 
-/* ----------------- content ----------------- */
+/* content */
 
 .content-margin_left {
   margin-left: 90px;
@@ -265,39 +265,7 @@
 
 /* ---------------- Các thuộc tính tuỳ chỉnh cho đối tượng ----------- */
 
-.hidden-shape__circle {
-  scale: 0;
-  transition: all ease 1s;
-}
-
-.hidden-shape__square {
-  scale: 0;
-  transition: all ease 1s;
-}
-
-.hidden-shape__triangle {
-  scale: 0;
-  transition: all ease 1.5s;
-}
-
-@media (prefers-reduced-motion) {
-  .hidden-shape__circle {
-    transition: none;
-  }
-}
-
-.show {
-  opacity: 1;
-  scale: 1;
-  transform: translateX(0);
-  transform: translateY(0);
-  transform: rotate();
-}
-
-.show-hide {
-  opacity: 0;
-}
-
+/* -------- Content-1 -------- */
 .avt-1 {
   width: 70%;
   transform: rotate(-7deg);
@@ -307,9 +275,10 @@
 .icon-1 {
   top: 0;
   right: -40px;
-  scale: 1.2;
   color: gold;
-  transform: rotate(8deg);
+  scale: 1.2;
+  rotate: 8deg;
+  /* transform: rotate(8deg); */
 }
 
 /* Money */
@@ -317,7 +286,8 @@
   bottom: 0;
   left: -40px;
   color: rgb(0, 193, 61);
-  transform: rotate(-10deg);
+  rotate: -10deg;
+  /* transform: rotate(-10deg); */
 }
 
 .circle {
@@ -326,9 +296,10 @@
   width: 600px;
   scale: 1;
   border-radius: 50%;
-  /* background-color: #079c72; */
   background-color: #47b06a;
 }
+
+/* -------- Content-2 -------- */
 
 .avt-2 {
   width: 70%;
@@ -340,7 +311,7 @@
   top: 0;
   left: 0;
   color: #beaafe;
-  transform: rotate(-10deg);
+  rotate: -10deg;
 }
 
 /* Heart */
@@ -349,7 +320,7 @@
   left: -40px;
   color: #f94357;
   scale: 1.3;
-  transform: rotate(-4deg);
+  rotate: -4deg;
 }
 
 /* Nothing */
@@ -357,12 +328,51 @@
   top: 300px;
   right: -50px;
   scale: 0.4;
-  transform: rotate(45deg);
+  rotate: 45deg;
 }
+
+.square {
+  position: absolute;
+  height: 600px;
+  width: 500px;
+  border-radius: 20px;
+  scale: 1;
+  rotate: -12deg;
+  background-color: #47b06a;
+}
+
+/* -------- Content-3 -------- */
 
 .avt-3 {
   width: 70%;
   transform: rotate(-2deg);
+}
+
+/* Music */
+.icon-6 {
+  bottom: 50px;
+  left: -50px;
+  color: #75a0ff;
+  scale: 0.7;
+  rotate: 25deg;
+}
+
+/* fire */
+.icon-7 {
+  top: 300px;
+  right: -70px;
+  color: #f94357;
+  scale: 1;
+  rotate: 5deg;
+}
+
+/* Start */
+.icon-8 {
+  top: 0px;
+  left: -50px;
+  color: gold;
+  scale: 1.2;
+  rotate: -18deg;
 }
 
 .triangle {
@@ -375,44 +385,10 @@
   position: absolute;
   top: -10%;
   left: 0%;
-  transform: rotate(45deg);
+  rotate: 45deg;
 }
 
-/* Music */
-.icon-6 {
-  bottom: 50px;
-  left: -50px;
-  color: #75a0ff;
-  scale: 0.7;
-  transform: rotate(25deg);
-}
-
-/* fire */
-.icon-7 {
-  top: 300px;
-  right: -70px;
-  color: #f94357;
-  scale: 1;
-  transform: rotate(5deg);
-}
-
-/* Start */
-.icon-8 {
-  top: 0px;
-  left: -50px;
-  color: gold;
-  scale: 1.2;
-  transform: rotate(-18deg);
-}
-
-.square {
-  position: absolute;
-  height: 600px;
-  width: 500px;
-  border-radius: 30px;
-  transform: rotate(-12deg);
-  background-color: #47b06a;
-}
+/* -------- Content-4 -------- */
 
 .square-2 {
   position: absolute;
@@ -439,22 +415,43 @@
   scale: 0.7;
 }
 
+/* -------- Content-5 -------- */
+
 .content-5 {
-  height: 120vh;
+  height: 100vh;
 }
 
 .container-avt {
   position: relative;
+  animation: ballons 30s ease-in-out infinite;
 }
 
-.avt-0 {
+@keyframes ballons {
+  0% {
+    transform: translate(-5%, 5%);
+  }
+  25% {
+    transform: translate(0%, 5%);
+  }
+  50% {
+    transform: translate(5%, 5%);
+  }
+  75% {
+    transform: translate(5%, 5%);
+  }
+  100% {
+    transform: translate(-5%, 5%);
+  }
+}
+
+.avt-4 {
   position: relative;
   width: 400px;
   z-index: 5;
 }
 
 .content-6 {
-  height: 50vh;
+  height: 70vh;
 }
 
 .ending {
@@ -465,22 +462,23 @@
 }
 
 .plant-animate {
-  position: absolute;
-  bottom: 110px;
+  position: relative;
 }
 
 .plant {
   position: absolute;
-  bottom: 50px;
-
-  width: 300px;
-  height: 300px;
-  scale: 2;
+  bottom: -23px;
 }
 
 .notes-message {
+  margin-top: 0;
   color: #000000;
   font-size: 17px;
+}
+
+.notes-message h3 {
+  margin-bottom: 10px;
+  line-height: 25px;
 }
 
 .notes-message p {
@@ -560,4 +558,108 @@
 .vietnam {
   float: right;
   margin-top: 0px;
+}
+
+/* --------- Hidden --------- */
+
+.hidden {
+  opacity: 0;
+  transition: all ease 1s;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.hidden-shape__circle {
+  opacity: 1;
+  transform: translate(0) rotate(0deg) scale(0.1);
+}
+
+.hidden-shape__square {
+  opacity: 1;
+  transform: translate(0%, 0%) rotate(45deg) scale(0);
+}
+
+.hidden-shape__triangle {
+  opacity: 1;
+  transform: translate(0%, 0%) scale(0);
+}
+
+/* icon hidden */
+
+.hidden-icon__1 {
+  transform: translate(-100%, 100%) rotate(-45deg);
+}
+
+.hidden-icon__2 {
+  transform: translate(130%, -100%) rotate(45deg);
+}
+
+.hidden-icon__3 {
+  transform: translate(100%, 100%) rotate(0deg);
+}
+
+.hidden-icon__4 {
+  transform: translate(200%, -200%) rotate(-90deg);
+}
+
+.hidden-icon__5 {
+  transform: translate(-200%, 100%) rotate(45deg);
+}
+
+.hidden-icon__6 {
+  transform: translate(200%, -200%) rotate(90deg);
+}
+
+.hidden-icon__7 {
+  transform: translate(-200%, 0%) rotate(-90deg);
+}
+
+.hidden-icon__8 {
+  transform: translate(100%, 200%) rotate(-90deg);
+}
+
+/* Content Hidden */
+
+.p1 {
+  transform: translate(0%, 20%);
+  transition-delay: 400ms;
+}
+.p2 {
+  transform: translate(0%, 20%);
+  transition-delay: 600ms;
+}
+
+.p3 {
+  transform: translate(0%, 20%);
+  transition-delay: 800ms;
+}
+
+.rich {
+  transform: translate(0%, 70%);
+  transition-delay: 600ms;
+}
+
+.rich-2 {
+  transform: translate(0%, 40%);
+  transition-delay: 600ms;
+}
+
+.hidden-flower {
+  transform: translate(0%, 40%);
+  transition-delay: 1500ms;
+}
+
+/* --------- Show --------- */
+
+.show {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.show-hide {
+  opacity: 0;
 }

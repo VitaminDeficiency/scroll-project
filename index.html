@@ -7,6 +7,7 @@
     <title>Birthday</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./item.css" />
+    <link rel="stylesheet" href="./responsive.css" />
     <script
       src="https://kit.fontawesome.com/5381d121e3.js"
       crossorigin="anonymous"
@@ -16,6 +17,19 @@
   </head>
   <body>
     <div class="background">
+      <section class="section-media flex-center">
+        <div class="container-media flex-center">
+          <img
+            class="oh-no"
+            src="./asset-item-background/./oh-no.png"
+            alt=""
+            srcset=""
+          />
+          <h1>Oh Không!</h1>
+          <p>Xin vui lòng mở trang web này trên máy tính</p>
+          <p>Nếu đang mở trên máy tính, hãy cho trình duyệt full màng hình</p>
+        </div>
+      </section>
       <section class="section-welcome">
         <div class="sticky over-hiden">
           <div class="welcome-background flex-center">
@@ -24,16 +38,23 @@
               src="./asset-item-background/background-1.png"
               alt=""
             />
+
+            <lottie-player
+              class="scroll-animate"
+              src="https://assets8.lottiefiles.com/packages/lf20_dxwu3xu0.json"
+              background="transparent"
+              speed="1"
+              style="width: 80px; height: 80px"
+              loop
+              autoplay
+            ></lottie-player>
+
             <div class="welcome-cake-item flex-center">
-              <h1 class="text-welcome text-6">Và...</h1>
-              <h1 class="text-welcome text-5">
-                Trang web này ngắn lắm <br />
-                Nhưng lại có nhiều điều để nói
-              </h1>
+              <h1 class="text-welcome text-5">Và...</h1>
+
               <h1 class="text-welcome text-4">
                 Nhớ là <br />
                 lướt từ từ thôi nghe <br />
-                vì...
               </h1>
               <h1 class="text-welcome text-3">
                 Có sai sót thì <br />
@@ -167,7 +188,7 @@
               <div class="container-content content-margin_right">
                 <h1 class="header-content hidden">Hãy thật nhiều sức khoẻ</h1>
                 <p class="p1 hidden">
-                  Chúc bạn có nhiều sức khỏe, luôn khỏe mạnh và tràn đầy năng
+                  Chúc Vy có nhiều sức khỏe, luôn khỏe mạnh và tràn đầy năng
                   lượng để đối mặt với cuộc sống hàng ngày.
                   <br />
                   <br />
@@ -317,39 +338,35 @@
 
           <div class="content-6">
             <div class="container ending">
-              <div
-                class="container-content plant-animate flex-center full-width"
-              >
-                <lottie-player
-                  class="plant"
-                  src="https://assets10.lottiefiles.com/packages/lf20_wcjgoacf.json"
-                  background="transparent"
-                  speed="1"
-                  style="width: 300px; height: 300px"
-                  autoplay
-                ></lottie-player>
-              </div>
-              <div class="container-content notes-message full-width line">
+              <div class="container-content notes-message line">
+                <div class="plant-animate flex-center">
+                  <lottie-player
+                    class="plant"
+                    src="https://assets2.lottiefiles.com/packages/lf20_myjcieph.json"
+                    mode="bounce"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
                 <h3>Ghi chú từ Ý :</h3>
                 <p>
-                  <b>
-                    Trên đây là một bản web tôi thực hiện, mục đích chính là rèn
-                    luyện kỹ năng lập trình front-end.</b
-                  >
+                  Trên đây là một bản web tôi thực hiện, mục đích chính là rèn
+                  luyện kỹ năng lập trình front-end.
                 </p>
                 <p>
-                  <b>
-                    Nhưng có lẽ sẽ được nhộm thêm màu sắc nếu mang một chút ý
-                    nghĩa, tuy không chắc sau này sẽ như thế nào, nhưng khi nhắc
-                    đến khởi đầu của tôi trên con đường mới, thì cũng có điều
-                    hay để nhớ lại.
-                  </b>
+                  Nhưng có lẽ sẽ được nhộm thêm màu sắc nếu mang một chút ý
+                  nghĩa, tuy không chắc sau này sẽ như thế nào, nhưng khi nhắc
+                  đến khởi đầu của tôi trên con đường mới, thì cũng có điều hay
+                  để nhớ lại.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="footer">
+          <div class="footer flex-center column">
             <div class="container">
               <div class="container-contact">
                 <div class="contact-info">
@@ -361,6 +378,7 @@
                     DOM, không sử dụng bất kì một thư viện hay Framework nào.
                   </p>
                   <p>Một số nguồn hình ảnh vector được lấy từ Freepik.com</p>
+                  <p>Nói chung là ghi đống này cho có</p>
                 </div>
                 <div class="contact-social">
                   <h3>Liên hệ</h3>
@@ -378,7 +396,7 @@
                   </a>
                 </div>
               </div>
-              <div class="line-white">
+              <div class="container-copyright">
                 <p class="copyright">
                   <i class="fa-regular fa-copyright"></i> 2023 <b>Nguyen Y</b>.
                   All rights reserved.
@@ -390,13 +408,5 @@
         </div>
       </section>
     </div>
-
-    <!-- <script src="index.min.js"></script>
-    <canvas id="my-canvas"></canvas>
-    <script>
-      var confettiSettings = { target: "my-canvas" };
-      var confetti = new ConfettiGenerator(confettiSettings);
-      confetti.render();
-    </script> -->
   </body>
 </html>

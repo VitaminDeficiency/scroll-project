@@ -41,9 +41,9 @@
 }
 
 .background {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -74,6 +74,13 @@
   top: 0;
 }
 
+.scroll-animate {
+  position: absolute;
+  bottom: -10px;
+  left: 47%;
+  /* scale: 0.2; */
+}
+
 .text-welcome {
   position: absolute;
   text-align: center;
@@ -87,7 +94,6 @@
   width: 100%;
   height: 300vh;
   margin-top: -150vh;
-  /* visibility: hidden; */
 }
 
 .header-background {
@@ -179,7 +185,7 @@
 
 .container {
   position: relative;
-  width: 1000px;
+  max-width: 1000px;
   height: 100%;
   margin: auto;
 }
@@ -451,7 +457,7 @@
 }
 
 .content-6 {
-  height: 70vh;
+  height: 50vh;
 }
 
 .ending {
@@ -461,19 +467,20 @@
   margin-top: 0;
 }
 
-.plant-animate {
-  position: relative;
-}
-
-.plant {
-  position: absolute;
-  bottom: -23px;
-}
-
 .notes-message {
+  width: 100%;
+  position: relative;
   margin-top: 0;
-  color: #000000;
+  color: #d2e1ff;
+  /* color: #3b3f64; */
   font-size: 17px;
+  transform: translate(0, 100%);
+  transition: all 0.5s ease-in-out;
+  z-index: 4;
+}
+
+.notes-message:hover {
+  transform: translate(0, 0);
 }
 
 .notes-message h3 {
@@ -486,28 +493,42 @@
   line-height: 25px;
 }
 
+.plant-animate {
+  position: relative;
+}
+
+.plant {
+  position: absolute;
+  bottom: -21px;
+}
+
 .full-width {
   width: 100%;
 }
 
 .line {
   padding: 15px 0;
-  border-top: 5px solid #000000;
+  border-top: 5px solid #3b3f64;
 }
 
 .footer {
   width: 100%;
-  height: 270px;
   font-size: 15px;
   color: #d2e1ff;
   background: #0b1a33;
+  justify-content: flex-end;
+  z-index: 5;
 }
+/* 
+.footer .container {
+  width: 100%;
+} */
 
 .container-contact {
-  font-size: 15px;
   width: 100%;
-  height: 60%;
-  padding-top: 30px;
+  font-size: 15px;
+  height: 200px;
+  padding-top: 20px;
 }
 
 .container-contact h3 {
@@ -523,7 +544,7 @@
   float: left;
 }
 
-.contact-info p:nth-child(3) {
+.contact-info p + p {
   margin: 10px 0;
 }
 
@@ -544,9 +565,9 @@
   color: #ecf2ff;
 }
 
-.line-white {
-  padding: 15px 0;
-
+.container-copyright {
+  padding: 10px 0;
+  margin-bottom: 40px;
   border-top: 2px solid #3c485c;
 }
 
@@ -646,6 +667,11 @@
 .rich-2 {
   transform: translate(0%, 40%);
   transition-delay: 600ms;
+}
+
+.hidden-flower {
+  transform: translate(0%, 40%);
+  transition-delay: 1500ms;
 }
 
 .hidden-flower {

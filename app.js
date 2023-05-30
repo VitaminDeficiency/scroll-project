@@ -42,7 +42,8 @@ const cakeElement = [
   $(".cake-8"),
 ];
 
-const hiddenCircle = $$(".hidden");
+const hiddenElement = $$(".hidden");
+const plantAnimate = $(".plant");
 
 (function () {
   var app = {
@@ -61,10 +62,6 @@ const hiddenCircle = $$(".hidden");
 
         _this.welcomeScreen(scrollTop, offsetHeightWelcome);
         _this.headerScreen(scrollTop, offsetHeightHeader);
-
-        // console.log(sectionContent.getBoundingClientRect().top);
-        // if (sectionheader.getBoundingClientRect().top <= 0) {
-        // }
       };
     },
 
@@ -167,36 +164,28 @@ const hiddenCircle = $$(".hidden");
         textWelcome2,
         scroll,
         obHeight * 0.2,
-        obHeight * 0.21,
-        obHeight * 0.29,
-        obHeight * 0.3
+        obHeight * 0.23,
+        obHeight * 0.28,
+        obHeight * 0.31
       );
       this.handleOpacityChange(
         textWelcome3,
         scroll,
-        obHeight * 0.3,
-        obHeight * 0.31,
+        obHeight * 0.34,
         obHeight * 0.39,
-        obHeight * 0.4
+        obHeight * 0.44,
+        obHeight * 0.47
       );
       this.handleOpacityChange(
         textWelcome4,
         scroll,
-        obHeight * 0.4,
-        obHeight * 0.41,
-        obHeight * 0.49,
-        obHeight * 0.5
-      );
-      this.handleOpacityChange(
-        textWelcome5,
-        scroll,
+        obHeight * 0.47,
         obHeight * 0.5,
-        obHeight * 0.51,
-        obHeight * 0.59,
+        obHeight * 0.55,
         obHeight * 0.6
       );
       this.handleOpacityChange(
-        textWelcome6,
+        textWelcome5,
         scroll,
         obHeight * 0.6,
         obHeight * 0.61,
@@ -246,7 +235,6 @@ const hiddenCircle = $$(".hidden");
     contentScreens: function () {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          console.log(entry);
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
           } else {
@@ -254,7 +242,7 @@ const hiddenCircle = $$(".hidden");
           }
         });
       });
-      hiddenCircle.forEach((el) => observer.observe(el));
+      hiddenElement.forEach((el) => observer.observe(el));
     },
 
     // RUN

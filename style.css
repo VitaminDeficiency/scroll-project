@@ -8,19 +8,6 @@
   src: url(./font/SVN-Cera-Round-Regular.ttf);
 }
 
-/* #my-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  visibility: hidden;
-}
-
-#my-canvas.active {
-  visibility: visible;
-} */
-
 .flex-center {
   display: flex;
   justify-content: center;

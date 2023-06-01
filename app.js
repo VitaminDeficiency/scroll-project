@@ -52,8 +52,6 @@ const plantAnimate = $(".plant");
       const _this = this;
       document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        // console.log(scrollTop);
-
         const offsetHeightWelcome =
           sectionWelcome.offsetHeight - window.innerHeight;
 

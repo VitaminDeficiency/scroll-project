@@ -17,15 +17,19 @@
 
   .container-media {
     width: 600px;
-    height: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column-reverse;
     border-radius: 20px;
+    padding: 20px;
     background-color: #ecf5ff;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   }
 
   .oh-no {
-    width: auto;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     align-self: flex-end;
   }
 
@@ -59,7 +63,7 @@
 @media (max-width: 767px) {
   .container-media {
     width: 90%;
-    height: 600px;
+    padding: 20px;
     margin: 15px 0;
     display: flex;
     flex-direction: column;
@@ -69,8 +73,9 @@
   }
 
   .oh-no {
-    width: auto;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     order: 2;
   }
 
